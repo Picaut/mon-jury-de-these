@@ -1,0 +1,132 @@
+{
+  "format": "jury-these",
+  "version": 2,
+  "profile": {
+    "doctorant": "Élodie Martin",
+    "thesisTitle": "Étude fictive des dynamiques de recherche interdisciplinaire",
+    "doctoralSchool": "MV68S",
+    "institution": "Université Paris 1 - Panthéon Sorbonne",
+    "defenseDate": "2027-06-15"
+  },
+  "settings": {
+    "minimumMembers": 4,
+    "maximumMembers": 8,
+    "maximumInvited": 1,
+    "csiExaminers": true,
+    "rapporteurExternalUnit": true,
+    "rapporteurExternalSchool": true,
+    "rapporteurExternalInstitution": true,
+    "directorRequired": true,
+    "directorInternal": false,
+    "institutionMemberRequired": false,
+    "emeritusRapporteur": true,
+    "emeritusPresident": false,
+    "parityMode": "one-each",
+    "minimumGenderPercentage": 40,
+    "womenByTotal": {
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    }
+  },
+  "members": [
+    {
+      "name": "Camille Moreau",
+      "gender": "Femme",
+      "institution": "Université fictive des Rives",
+      "quality": "Professeur des universités",
+      "memberStatus": "Oui",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Président.e",
+      "affiliation": "Membre de l'établissement d'inscription"
+    },
+    {
+      "name": "Alexandre Petit",
+      "gender": "Homme",
+      "institution": "Université fictive des Rives",
+      "quality": "Professeur des universités",
+      "memberStatus": "Oui",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Directeur.rice",
+      "affiliation": "Membre extérieur"
+    },
+    {
+      "name": "Nora Laurent",
+      "gender": "Femme",
+      "institution": "Institut fictif des sciences appliquées",
+      "quality": "Professeur des universités",
+      "memberStatus": "Oui",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Rapporteur.rice",
+      "affiliation": "Membre extérieur"
+    },
+    {
+      "name": "Hugo Bernard",
+      "gender": "Homme",
+      "institution": "Université fictive du Littoral",
+      "quality": "Professeur des universités",
+      "memberStatus": "Oui",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Rapporteur.rice",
+      "affiliation": "Membre extérieur"
+    },
+    {
+      "name": "Inès Robert",
+      "gender": "Femme",
+      "institution": "Université fictive des Rives",
+      "quality": "Maître de conférences",
+      "memberStatus": "Non",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "co-Directeur.rice",
+      "affiliation": "Membre de l'unité de recherche"
+    },
+    {
+      "name": "Sami Garcia",
+      "gender": "Homme",
+      "institution": "Université fictive des Monts",
+      "quality": "Maître de conférences",
+      "memberStatus": "Non",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Examinateur.trice",
+      "affiliation": "Membre extérieur"
+    },
+    {
+      "name": "Louise Faure",
+      "gender": "Homme",
+      "institution": "Centre fictif d'études doctorales",
+      "quality": "Membre invité (exemple fictif)",
+      "memberStatus": "Non",
+      "csiMember": "Non",
+      "hdr": "Oui",
+      "emeritus": "Non",
+      "role": "Membre invité",
+      "affiliation": "Membre extérieur"
+    },
+    {
+      "name": "Manon Lefèvre",
+      "gender": "Femme",
+      "institution": "Université fictive du Littoral",
+      "quality": "Maître de conférences",
+      "memberStatus": "Non",
+      "csiMember": "Non",
+      "hdr": "Non",
+      "emeritus": "Non",
+      "role": "Examinateur.trice",
+      "affiliation": "Membre extérieur"
+    }
+  ]
+}

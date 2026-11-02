@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Préparez la vérification de la composition d'un jury de thèse.">
+    <title>Vérifier un jury de thèse</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+    <script src="app.js" defer></script>
+    <script src="footer-date.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">Outil d'aide à la préparation d'un jury de thère</p>
+        <h1>Vérifier la composition de votre jury</h1>
+        <div class="intro-steps">
+          <p><span class="intro-step-number" aria-hidden="true">①</span><span>Rassemblez les informations sur les membres du jury avant d'en vérifier la conformité (téléchargez le mémo si besoin).</span></p>
+          <p><span class="intro-step-number" aria-hidden="true">②</span><span><span class="step-optional">Facultatif :</span> modifiez les paramètres correspondant aux règles particulières de votre école doctorale ou établissement d'inscription.</span></p>
+          <p><span class="intro-step-number" aria-hidden="true">③</span><span><span class="step-optional">Facultatif :</span> renseignez les informations concernant votre projet de thèse.</span></p>
+          <p><span class="intro-step-number" aria-hidden="true">④</span><span>Renseignez les informations sur chaque membre du jury.</span></p>
+          <p><span class="intro-step-number" aria-hidden="true">⑤</span><span>Vérifiez la conformité du jury et, si nécessaire, corrigez les informations saisies à partir des indications.</span></p>
+          <p><span class="intro-step-number" aria-hidden="true">⑥</span><span>Une fois votre jury vérifié, poursuivez la procédure de soutenance auprès de votre école doctorale.</span></p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="settings-notice about-tool" aria-labelledby="notice-title">
+        <h2 id="notice-title"><svg class="warning-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3.5 2.8 19.4a1.2 1.2 0 0 0 1.04 1.8h16.32a1.2 1.2 0 0 0 1.04-1.8L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M12 9v5.2m0 3.1h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>À propos de cet outil</h2>
+        <p>Cette application ne certifie pas la conformité juridique du jury. Cette application doit être utilisée comme une aide à la réflexion sur la composition du jury, pour le doctorant et son encadrement, avant de faire une proposition à son école doctorale. L'école doctorale puis l'établissement d'inscription vérifieront in fine la conformité de la composition du Jury.</p>
+        <p>Cette application respecte votre vie privée. Les données saisies ne sont pas enregistrées sur un serveur ni automatiquement enregistrées en local. Utilisez le bouton "Sauvegarder" pour télécharger une configuration sur votre appareil ; sans sauvegarde, elles sont perdues à l'actualisation ou à la fermeture de la page.</p>
+      </section>
+
+      <div class="configuration-actions" role="group" aria-label="Gestion de la configuration">
+        <button class="button button-secondary" id="load-configuration" type="button">Charger une configuration</button>
+        <input id="configuration-file" type="file" accept=".json,application/json" hidden>
+        <button class="button button-secondary" id="save-configuration" type="button">Sauvegarder</button>
+        <button class="button button-secondary" id="reset-configuration" type="button">Réinitialiser</button>
+      </div>
+
+      <details class="section-panel" aria-labelledby="settings-title">
+        <summary class="section-panel-summary">
+          <span>
+            <span class="eyebrow">Règles et critères (facultatif)</span>
+            <span class="section-panel-title" id="settings-title">Paramétrage du jury</span>
+          </span>
+        </summary>
+        <div class="section-panel-content">
+          <section aria-labelledby="composition-title">
+            <div class="composition-heading">
+              <h2 id="composition-title">Arrêté du 25 mai 2016 fixant le cadre national de la formation et les modalités conduisant à la délivrance du diplôme national de doctorat<a class="source-link" href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032587086" target="_blank" rel="noopener noreferrer" aria-label="Consulter l'arrêté du 25 mai 2016 sur Légifrance (nouvel onglet)">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 13.5a4 4 0 0 0 5.66 0l3-3A4 4 0 0 0 13 4.84l-1.72 1.72" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 10.5a4 4 0 0 0-5.66 0l-3 3A4 4 0 0 0 11 19.16l1.72-1.72" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a></h2>
+            </div>
+            <ul class="settings-list">
+              <li>Le nombre des membres du jury est compris entre quatre et huit.</li>
+              <li>Il est composé au moins <strong>pour moitié de personnalités françaises ou étrangères, extérieures</strong> à l'unité de recherche où a été préparée le doctorat, à l'école doctorale et à l'établissement d'inscription du doctorant.</li>
+              <li>Les personnalitées sont choisies en raison de leur compétence scientifique ou professionnelle dans le champ de recherche concerné.</li>
+              <li>Sa composition doit permettre une <strong>représentation équilibrée des femmes et des hommes</strong>.</li>
+              <li><strong>La moitié du jury au moins doit être composée de professeurs ou personnels assimilés</strong> au sens de l'article 6 du décret n° 92-70 relatif au Conseil national des universités et de l'article 5 du décret n° 87-31 pour les disciplines de santé, ou d'enseignants de rang équivalent qui ne relèvent pas du ministère chargé de l'enseignement supérieur et de la recherche.</li>
+              <li>Les travaux du doctorant sont préalablement examinés par <strong>au moins deux rapporteurs</strong> désignés par le chef d'établissement, habilités à diriger des recherches ou appartenant à l'une des catégories mentionnées au 1° et au 2° de l'article 16 du présent arrêté, sur proposition du directeur de l'école doctorale, après avis du directeur de thèse.
+                  Dans le cas de travaux impliquant des personnes du monde socio-économique ou culturel qui n'appartiennent pas au monde universitaire, un troisième rapporteur, reconnu pour ses compétences dans le domaine, peut être désigné sur proposition du directeur de l'école doctorale, après avis du directeur de thèse..</li>
+              <li>Sauf si le champ disciplinaire ou le contenu des travaux ne le permettent pas, <strong>les deux rapporteurs sont extérieurs à l'école doctorale et à l'établissement du doctorant</strong>. Ils peuvent appartenir à des établissements d'enseignement supérieur ou de recherche étrangers ou à d'autres organismes étrangers.</li>
+              <li>Chaque rapporteur doit être titulaire de l'HDR ou d'une équivalence.</li>
+              <li>Un membre de l'encadrement de la thèse ou un membre du CSI ne peut pas être rapporteur.</li>
+              <li>Le <strong>Président du jury doit être un professeur ou assimilé ou un enseignant de rang équivalent</strong>.</li>
+              <li>Les membres du CSI ne peuvent pas être rapporteurs de la thèse.</li>
+            </ul>
+          </section>
+          <section aria-labelledby="school-rules-title">
+            <div class="school-rules-heading">
+              <h2 id="school-rules-title">Règles complémentaires de votre école doctorale</h2>
+              <div class="configuration-actions settings-configuration-actions">
+                <button class="button button-secondary" id="load-settings" type="button">Charger des règles</button>
+                <button class="button button-secondary" id="save-settings" type="button">Sauvegarder les règles</button>
+                <input id="settings-file" type="file" accept=".json,application/json" hidden>
+              </div>
+            </div>
+            <aside class="ed-info" aria-label="Information pour les écoles doctorales">
+              <p><strong>Information pour les écoles doctorales</strong></p>
+              <p>Si vous êtes une école doctorale, vous pouvez générer un fichier de sauvegarde des règles de soutenance propres à votre ED, et le mettre à disposition de vos doctorant·es. Vous pouvez également déposer ce fichier sur la plateforme GitHub, pour qu'il soit intégré dans une base de données qui sera disponible en ligne pour les utilisateurs.</p>
+            </aside>
+            <div class="fields settings-fields">
+              <fieldset class="field range-field">
+                <legend>Nombre de membres du jury</legend>
+                <div class="range-values" aria-live="polite">
+                  <span>Minimum : <output id="minimum-members-value" for="minimum-members">4</output></span>
+                  <span>Maximum : <output id="maximum-members-value" for="maximum-members">8</output></span>
+                </div>
+                <div class="dual-range" id="member-range">
+                  <div class="dual-range-track" aria-hidden="true">
+                    <span class="dual-range-selection"></span>
+                  </div>
+                  <label class="visually-hidden" for="minimum-members">Nombre minimal de membres du jury</label>
+                  <input id="minimum-members" name="minimumMembers" type="range" min="4" max="8" step="1" value="4">
+                  <label class="visually-hidden" for="maximum-members">Nombre maximal de membres du jury</label>
+                  <input id="maximum-members" name="maximumMembers" type="range" min="4" max="8" step="1" value="8">
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="maximum-invited">Nombre maximal de membres invités</label>
+                <input id="maximum-invited" name="maximumInvited" type="number" min="0" max="4" step="1" value="1" required>
+              </div>
+              <fieldset class="field toggle-field">
+                <legend>Les membres du CSI peuvent être examinateurs</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="csi-examiners" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="csi-examiners" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Les rapporteurs doivent être extérieurs à l'unité de recherche</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-unit" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-unit" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Les rapporteurs doivent être extérieurs à l'école doctorale d'inscription</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-school" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-school" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Les rapporteurs doivent être extérieurs à l'établissement d'inscription</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-institution" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="rapporteur-external-institution" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Le Directeur ou la Directrice de thèse est obligatoirement membre du Jury</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="director-required" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="director-required" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Le directeur ou la directrice de thèse est toujours considéré.e comme membre interne, même s'il ou elle est issu.e d'un autre établissement</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="director-internal" value="Oui">
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="director-internal" value="Non" checked>
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Au moins un membre du jury doit appartenir à l'établissement d'inscription</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="institution-member-required" value="Oui">
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="institution-member-required" value="Non" checked>
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Un membre émérite peut être rapporteur</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="emeritus-rapporteur" value="Oui" checked>
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="emeritus-rapporteur" value="Non">
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="field toggle-field">
+                <legend>Un membre émérite peut être Président du Jury</legend>
+                <div class="toggle-options">
+                  <label class="toggle-option">
+                    <input type="radio" name="emeritus-president" value="Oui">
+                    <span>Oui</span>
+                  </label>
+                  <label class="toggle-option">
+                    <input type="radio" name="emeritus-president" value="Non" checked>
+                    <span>Non</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="field parity-settings">
+                <label for="parity-mode">Condition de parité Hommes/Femmes</label>
+                <select id="parity-mode" name="parityMode">
+                  <option value="one-each" selected>Au moins un membre de chaque genre</option>
+                  <option value="percentage">Pourcentage minimal de femmes et d'hommes</option>
+                  <option value="table">Nombre minimal de femmes selon l'effectif du jury</option>
+                </select>
+                <div id="parity-percentage-settings" class="parity-detail" hidden>
+                  <label for="minimum-gender-percentage">Pourcentage minimal de femmes et d'hommes parmi tous les membres (%)</label>
+                  <input id="minimum-gender-percentage" name="minimumGenderPercentage" type="number" min="0" max="50" step="0.1" value="40">
+                </div>
+                <div id="parity-table-settings" class="parity-detail" hidden>
+                  <p>Indiquez le nombre minimal de femmes pour chaque effectif possible du jury.</p>
+                  <div class="parity-table-scroll">
+                    <table class="parity-table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nombre de membres</th>
+                          <th scope="col">Nombre minimal de femmes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><th scope="row">4</th><td><input aria-label="Nombre minimal de femmes pour un jury de 4 membres" id="women-count-4" type="number" min="0" max="4" step="1" value="1"></td></tr>
+                        <tr><th scope="row">5</th><td><input aria-label="Nombre minimal de femmes pour un jury de 5 membres" id="women-count-5" type="number" min="0" max="5" step="1" value="1"></td></tr>
+                        <tr><th scope="row">6</th><td><input aria-label="Nombre minimal de femmes pour un jury de 6 membres" id="women-count-6" type="number" min="0" max="6" step="1" value="1"></td></tr>
+                        <tr><th scope="row">7</th><td><input aria-label="Nombre minimal de femmes pour un jury de 7 membres" id="women-count-7" type="number" min="0" max="7" step="1" value="1"></td></tr>
+                        <tr><th scope="row">8</th><td><input aria-label="Nombre minimal de femmes pour un jury de 8 membres" id="women-count-8" type="number" min="0" max="8" step="1" value="1"></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </details>
+
+      <details class="section-panel profile-panel" aria-labelledby="profile-title" open>
+        <summary class="section-panel-summary">
+          <span>
+            <span class="eyebrow">Informations sur la thèse (falcutatif)</span>
+            <span class="section-panel-title" id="profile-title">Identification de la thèse</span>
+          </span>
+        </summary>
+        <div class="section-panel-content">
+          <div class="fields profile-fields">
+            <div class="field">
+              <label for="profile-doctorant">Nom et prénom du doctorant</label>
+              <input id="profile-doctorant" name="doctorant" autocomplete="name">
+            </div>
+            <div class="field profile-thesis-title">
+              <label for="profile-thesis-title">Titre de la thèse</label>
+              <input id="profile-thesis-title" name="thesisTitle">
+            </div>
+            <div class="field">
+              <label for="profile-doctoral-school-search">École doctorale</label>
+              <div class="school-combobox">
+                <input id="profile-doctoral-school-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="doctoral-school-options" autocomplete="off" placeholder="Rechercher par sigle, numéro ou nom">
+                <input id="profile-doctoral-school" name="doctoralSchool" type="hidden">
+                <div id="doctoral-school-options" class="school-options" role="listbox" hidden></div>
+              </div>
+              <p id="doctoral-school-status" class="field-hint" role="status" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="profile-institution">Établissement d'inscription</label>
+              <select id="profile-institution" name="institution" disabled>
+                <option value="">Choisissez d'abord une école doctorale</option>
+              </select>
+              <p id="institution-status" class="field-hint" role="status" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="profile-defense-date">Date de soutenance prévisionnelle</label>
+              <input id="profile-defense-date" name="defenseDate" type="date">
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="section-panel" aria-labelledby="members-title" open>
+        <summary class="section-panel-summary">
+          <span>
+            <span class="eyebrow">Votre jury de soutenance</span>
+            <span class="section-panel-title" id="members-title">Membres du jury</span>
+          </span>
+        </summary>
+        <div class="section-panel-content">
+          <div class="section-heading">
+            <div class="jury-actions">
+              <button class="button button-secondary" id="download-member-memo" type="button">Télécharger le mémo</button>
+            </div>
+          </div>
+
+          <form id="jury-form" novalidate>
+            <div id="members" class="members-list"></div>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Vérifier le jury</button>
+              <button class="button button-secondary" id="export-pdf" type="button">Exporter le jury</button>
+            </div>
+          </form>
+
+          <div id="result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        </div>
+      </details>
+      <section id="pdf-export" class="pdf-export" aria-labelledby="pdf-export-title" hidden></section>
+      <datalist id="jury-institution-suggestions"></datalist>
+      <datalist id="jury-quality-suggestions"></datalist>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Application de vérification de conformité d'un jury de thèse — aucune donnée n'est transmise à un serveur.</p>
+        <p class="site-footer-version">Université Gustave Eiffel - Version du <time data-last-modified datetime="2026-10-30">30 octobre 2026</time></p>
+        <nav class="site-footer-links" aria-label="Pied de page">
+          <a href="mentions-legales.html#mentions-legales">Mentions légales</a>
+          <a href="mentions-legales.html#donnees-personnelles">Données personnelles</a>
+          <a href="mentions-legales.html#credits">Crédits</a>
+          <a href="mentions-legales.html#a-propos">À propos</a>
+          <a href="mentions-legales.html#contribuer">Contribuer ou signaler une anomalie</a>
+          <a href="mentions-legales.html#contact">Contact</a>
+        </nav>
+        <p class="site-footer-license">Licence <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">GNU GPL-3.0</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

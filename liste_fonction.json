@@ -1,0 +1,6 @@
+{
+  "Professeur ou assimilé": ["Professeur des universités", "Professeur des universités émérite", "PU-PH", "Professeur associé", "Directeur de recherche", "Directeur d'études", "Professeur au Collège de France", "Professeur des grandes écoles", "Enseignant de rang équivalent", "Full professor / rang équivalent étranger"],
+  "Maître de conférences / chercheur": ["Maître de conférences", "MCU-PH", "Maître de conférences associé", "Chargé de recherche", "Chargé d'études", "Ingénieur de recherche", "Associate professor / rang équivalent étranger", "Assistant professor / rang équivalent étranger"],
+  "Personnalité extérieure": ["Expert R&D entreprise", "Dirigeant / cadre d'entreprise", "Consultant / expert indépendant", "Professionnel qualifié (avocat, architecte, vétérinaire…)", "Docteur (hors académique)"],
+  "Autre": ["Autre"]
+}

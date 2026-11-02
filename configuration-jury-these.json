@@ -1,0 +1,33 @@
+{
+  "profile": {
+    "doctorant": "Camille Test",
+    "thesisTitle": "Étude de configuration",
+    "doctoralSchool": "",
+    "institution": "",
+    "defenseDate": "2030-01-02",
+    "doctoralSchoolSearch": ""
+  },
+  "settings": {
+    "minimumMembers": 5,
+    "maximumMembers": 7,
+    "maximumInvited": 2,
+    "csiExaminers": false,
+    "directorInternal": true,
+    "institutionMemberRequired": true
+  },
+  "members": [
+    {
+      "name": "Alex Test",
+      "gender": "Femme",
+      "institution": "Université Test",
+      "quality": "Professeur",
+      "memberStatus": "Oui",
+      "hdr": "Équivalence",
+      "emeritus": "Non",
+      "role": "Rapporteur.rice",
+      "affiliation": "Membre extérieur"
+    }
+  ],
+  "format": "jury-these",
+  "version": 2
+}
