@@ -5,16 +5,16 @@ Cette application permet de tester la conformité d'un jury dans le cadre de la 
 
 Cete application est basée sur les élements de l'[Arrêté du 25 mai 2016 fixant le cadre national de la formation et les modalités conduisant à la délivrance du diplôme national de doctorat](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032587086) concernant la cponstitution d'un Jury.
 
-Les écoles doctorales et les établissements peuvent compléter ces conditions par des élément complémentaires, bien souvent, le nombre possible d'invités, la parité de genre, la limitation de la participation des éméritats à différents rôle dans le jury... Ces éléments ne remettent pas en cause les conditions de l'arrêté, mais peuvent résulter d'une interprétation des réègles et de la mise en oeuvre d'une politique doctorale propre à l'école doctorale ou à l'établissement d'inscription.
+Les écoles doctorales et les établissements peuvent compléter ces conditions par des élément complémentaires, bien souvent, le nombre possible d'invités, la parité de genre, la limitation de la participation des éméritats à différents rôle dans le jury... Ces éléments ne remettent pas en cause les conditions de l'arrêté, mais peuvent résulter d'une interprétation des règles et de la mise en oeuvre d'une politique doctorale propre à l'école doctorale ou à l'établissement d'inscription.
 
 ## Fonctionnement général
 
 ### La page web est organisée en plusieurs rubriques
 
-- Paramétrage du jury : cette partie
-  - rappelle les règles de l'arrêté du doctorat du 20 mai mai 2016,
-  - propose également des critères complémentaires que peuvent vous imposer l'école doctorale (ED) et votre établissement d'inscription. Il est conseillé de consulter les règles de l'ED et si besoin de changer certains paramètres. Les règles par défaut sont assez usuelles
-  - sauvegarder, si besoin, les règles une fois modifiée.
+- Paramétrage du jury : 
+  - rappel des règles de l'arrêté du doctorat du 20 mai mai 2016;
+  - propositionde règles complémentaires que peuvent  imposer l'école doctorale (ED) et l'établissement d'inscription. Les règles par défaut sont assez usuelles;
+  - sauvegarde, si besoin, des règles une fois modifiée.
 - Identification de la thèse : informations concernant le doctorant et le sujet de thèse
 - Membres du Jury : cette partie permet de préciser les informations concernant chaque membre du jury et d'associer le rôle au sein du jury
 - A la fin de la page, s'affiche des informations concernant la composition du jury lorsque l'utilisateur clique sur le bouton "Vérifier le Jury"
@@ -61,14 +61,6 @@ Un fichier de sauvegarde ou un export contient les informations saisies. Si vous
 - Pour que le navigateur puisse charger les fichiers JSON (annuaire des écoles doctorales et liste des fonctions), servez les fichiers avec un serveur local. Avec Python, lancez `python -m http.server` depuis le dossier du projet puis ouvrez `http://localhost:8000`. Sous Windows, si la commande `python` n'est pas reconnue ou ouvre le Microsoft Store, utilisez `py -m http.server`.
 - Aucun paquet supplémentaire n'est requis.
 - Le fichier [jury-fictif-8-membres-1-invite.json](./jury-fictif-8-membres-1-invite.json) est un exemple de configuration qui satisfait les contrôles actuels avec huit membres et les paramètres par défaut.
-
-## Publication sur GitHub Pages
-
-1. Créez un dépôt GitHub et ajoutez-y ces fichiers.
-2. Dans le dépôt, ouvrez **Settings > Pages**.
-3. Dans **Build and deployment**, choisissez **Deploy from a branch**.
-4. Sélectionnez la branche contenant le site et le dossier `/ (root)`, puis enregistrez.
-5. Attendez la publication ; GitHub affichera l'adresse du site dans cette même page.
 
 ## Licence
 

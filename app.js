@@ -486,7 +486,7 @@ function updateMemberCompleteness(card) {
   const filled = requiredMemberFields.filter((fieldName) => getMemberFieldValue(card, fieldName).trim()).length;
   const total = requiredMemberFields.length;
   const badge = card.querySelector(".member-card-completeness");
-  badge.textContent = filled === total ? "✓ Complet" : `${filled}/${total} renseignés`;
+  badge.textContent = filled === total ? "✓ Complet" : `${filled} champ(s) sur ${total} renseignés`;
   badge.dataset.state = filled === total ? "complete" : filled === 0 ? "empty" : "partial";
   badge.title = `${filled} information(s) obligatoire(s) renseignée(s) sur ${total}`;
 }
