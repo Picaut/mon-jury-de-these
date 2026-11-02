@@ -1614,7 +1614,7 @@ juryForm.addEventListener("submit", (event) => {
   const summary = document.createElement("dl");
   summary.className = "result-summary";
   const summaryRows = [
-    ["Nombre membres dans le jury", String(memberTotal)],
+    ["Nombre de membres dans le jury", String(memberTotal)],
     ["Nombre de membres invités", String(invitedTotal)],
     ["Nombre de membres renseignés comme femmes", formatRatio(womenTotal)],
     ["Nombre de membres renseignés comme hommes", formatRatio(menTotal)],
