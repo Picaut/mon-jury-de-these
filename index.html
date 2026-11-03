@@ -105,11 +105,11 @@
                 </div>
               </fieldset>
               <div class="field">
-                <label for="maximum-invited">Nombre maximal de membres invités</label>
+                <label for="maximum-invited">Nombre maximal de membres invité·es</label>
                 <input id="maximum-invited" name="maximumInvited" type="number" min="0" max="4" step="1" value="1" required>
               </div>
               <fieldset class="field toggle-field">
-                <legend>Les membres du CSI peuvent être examinateurs</legend>
+                <legend>Les membres du CSI peuvent être examinateur·rices</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="csi-examiners" value="Oui" checked>
@@ -122,7 +122,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Les rapporteurs doivent être extérieurs à l'unité de recherche</legend>
+                <legend>Les rapporteur·rices doivent être extérieur·es à l'unité de recherche</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="rapporteur-external-unit" value="Oui" checked>
@@ -135,7 +135,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Les rapporteurs doivent être extérieurs à l'école doctorale d'inscription</legend>
+                <legend>Les rapporteur·rices doivent être extérieur·es à l'école doctorale d'inscription</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="rapporteur-external-school" value="Oui" checked>
@@ -148,7 +148,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Les rapporteurs doivent être extérieurs à l'établissement d'inscription</legend>
+                <legend>Les rapporteur·rices doivent être extérieur·es à l'établissement d'inscription</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="rapporteur-external-institution" value="Oui" checked>
@@ -161,7 +161,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Le Directeur ou la Directrice de thèse est obligatoirement membre du Jury</legend>
+                <legend>La direction de thèse doit obligatoirement être représentée au jury</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="director-required" value="Oui" checked>
@@ -174,7 +174,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Le directeur ou la directrice de thèse est toujours considéré.e comme membre interne, même s'il ou elle est issu.e d'un autre établissement</legend>
+                <legend>La direction de thèse est toujours considérée comme interne, même si la personne qui l'assure est rattachée à un autre établissement</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="director-internal" value="Oui">
@@ -187,7 +187,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Au moins un membre du jury doit appartenir à l'établissement d'inscription</legend>
+                <legend>Au moins un·e membre du jury doit appartenir à l'établissement d'inscription</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="institution-member-required" value="Oui">
@@ -200,7 +200,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Un membre émérite peut être rapporteur</legend>
+                <legend>Un·e membre émérite peut être rapporteur·rice</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="emeritus-rapporteur" value="Oui" checked>
@@ -213,7 +213,7 @@
                 </div>
               </fieldset>
               <fieldset class="field toggle-field">
-                <legend>Un membre émérite peut être Président du Jury</legend>
+                <legend>Un·e membre émérite peut présider le jury</legend>
                 <div class="toggle-options">
                   <label class="toggle-option">
                     <input type="radio" name="emeritus-president" value="Oui">
@@ -226,14 +226,14 @@
                 </div>
               </fieldset>
               <div class="field parity-settings">
-                <label for="parity-mode">Condition de parité Hommes/Femmes</label>
+                <label for="parity-mode">Condition de représentation équilibrée des genres</label>
                 <select id="parity-mode" name="parityMode">
-                  <option value="one-each" selected>Au moins un membre homme et un membre femme</option>
-                  <option value="percentage">Pourcentage minimal de femmes et d'hommes</option>
+                  <option value="one-each" selected>Au moins un membre de chaque genre</option>
+                  <option value="percentage">Pourcentage minimal de chaque genre</option>
                   <option value="table">Nombre minimal de femmes selon l'effectif du jury</option>
                 </select>
                 <div id="parity-percentage-settings" class="parity-detail" hidden>
-                  <label for="minimum-gender-percentage">Pourcentage minimal de femmes et d'hommes parmi tous les membres (%)</label>
+                  <label for="minimum-gender-percentage">Pourcentage minimal pour chaque genre parmi les membres (%)</label>
                   <input id="minimum-gender-percentage" name="minimumGenderPercentage" type="number" min="0" max="50" step="0.1" value="40">
                 </div>
                 <div id="parity-table-settings" class="parity-detail" hidden>

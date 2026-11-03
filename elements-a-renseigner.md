@@ -7,24 +7,24 @@ Ces règles complémentaires peuvent être définies par l'école doctorale dans
 | # | Paramètre | Type de saisie | Valeurs possibles | Par défaut |
 |---|-----------|----------------|-------------------|------------|
 | 1 | Nombre de membres du jury (minimum et maximum) | Curseur à deux poignées | De 4 à 8 | 4 à 8 |
-| 2 | Nombre maximal de membres invités | Nombre | De 0 à 4 | 1 |
+| 2 | Nombre maximal de membres invité·es | Nombre | De 0 à 4 | 1 |
 | 3 | Les membres du CSI peuvent être examinateur·rices | Oui / Non | Oui, Non | Oui |
 | 4 | Les rapporteur·rices doivent être extérieur·es à l'unité de recherche | Oui / Non | Oui, Non | Oui |
 | 5 | Les rapporteur·rices doivent être extérieur·es à l'école doctorale d'inscription | Oui / Non | Oui, Non | Oui |
 | 6 | Les rapporteur·rices doivent être extérieur·es à l'établissement d'inscription | Oui / Non | Oui, Non | Oui |
 | 7 | La direction de thèse est obligatoirement représentée au jury | Oui / Non | Oui, Non | Oui |
 | 8 | La direction de thèse est toujours considérée comme membre interne, même si la personne est issue d'un autre établissement | Oui / Non | Oui, Non | Non |
-| 9 | Au moins un membre du jury doit appartenir à l'établissement d'inscription | Oui / Non | Oui, Non | Non |
+| 9 | Au moins un·e membre du jury doit appartenir à l'établissement d'inscription | Oui / Non | Oui, Non | Non |
 | 10 | Un·e membre émérite peut être rapporteur·rice | Oui / Non | Oui, Non | Oui |
 | 11 | Un·e membre émérite peut présider le jury | Oui / Non | Oui, Non | Non |
-| 12 | Condition de parité hommes/femmes | Liste déroulante | Voir ci-dessous | Au moins un membre de chaque genre |
+| 12 | Condition de représentation équilibrée des genres | Liste déroulante | Voir ci-dessous | Au moins un membre de chaque genre |
 
 Les trois modes de parité (paramètre 12) :
 
 | Mode | Paramètre supplémentaire | Par défaut |
 |------|--------------------------|------------|
-| Au moins un membre homme et un membre femme | Aucun | — |
-| Pourcentage minimal de femmes et d'hommes | Pourcentage, de 0 à 50 %, sur tous les membres, arrondi à l'entier supérieur | 40 % |
+| Au moins un membre de chaque genre | Aucun | — |
+| Pourcentage minimal de chaque genre | Pourcentage, de 0 à 50 %, sur tous les membres, arrondi à l'entier supérieur | 40 % |
 | Nombre minimal de femmes selon l'effectif | Une valeur par effectif de 4 à 8 membres | 1 femme minimum pour chaque effectif |
 
 Ces règles peuvent être sauvegardées et rechargées seules, avec les boutons « Sauvegarder les règles » et « Charger des règles », sans modifier le profil ni les membres. Les membres dont le rôle est « Membre invité » ne sont pas compté·es dans les règles liées à l'effectif ou à la parité, sauf pour le paramètre 2, qui porte sur leur propre nombre.
