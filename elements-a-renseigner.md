@@ -54,12 +54,12 @@ Chaque membre dispose d'une fiche. Le bouton « Télécharger le mémo » fourni
 | 3 | Établissement ou organisme de rattachement | Recherche avec saisie libre | Établissements de l'annuaire, ou autre nom saisi librement | Oui |
 | 4 | Fonction ou qualité dans l'établissement ou organisme | Recherche avec saisie libre | Fonctions de `liste_fonction.json`, ou autre fonction saisie librement | Oui |
 | 5 | Professeur·e, personnel assimilé ou rang équivalent | Oui / Non | Oui, Non. Prérempli selon la fonction (Oui si elle relève de cette catégorie, Non sinon), et modifiable. | Oui |
-| 6 | Membre du CSI | Oui / Non | Oui, Non. Aucune valeur présélectionnée. | Non |
+| 6 | Membre du CSI | Oui / Non | Oui, Non. Aucune valeur présélectionnée. | Oui |
 | 7 | Titulaire de l'HDR | Choix unique | Oui, Non, Équivalence | Oui |
 | 8 | Titulaire de l'éméritat | Oui / Non | Oui, Non | Oui |
 | 9 | Rôle dans le jury | Liste déroulante | Président·e, Directeur·rice de thèse, co-Directeur·rice de thèse, co-Encadrant·e de thèse, Rapporteur·rice, Examinateur·rice, Membre invité·e | Oui |
 | 10 | Lien avec l'établissement | Liste déroulante | Membre de l'unité de recherche, Membre de l'école doctorale d'inscription, Membre de l'établissement d'inscription, Membre extérieur | Oui |
 
-- Chaque fiche affiche un indicateur de complétude qui compte les informations obligatoires renseignées (9 au total).
+- Chaque fiche affiche un indicateur de complétude qui compte les informations obligatoires renseignées (10 au total).
 - Les membres dont le rôle est « Membre invité » doivent aussi être renseigné·es, mais ne sont pas compté·es dans les conditions du jury, sauf pour la limite de leur nombre.
 - Une même personne ne peut figurer qu'une seule fois dans le jury.

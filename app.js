@@ -480,7 +480,7 @@ function updateMemberCardSummary(card) {
   card.querySelector(".member-card-summary").title = name;
 }
 
-const requiredMemberFields = memberFields.filter((fieldName) => fieldName !== "csiMember");
+const requiredMemberFields = memberFields;
 
 function updateMemberCompleteness(card) {
   const filled = requiredMemberFields.filter((fieldName) => getMemberFieldValue(card, fieldName).trim()).length;
@@ -637,11 +637,11 @@ function addMember(memberData = {}, { focus = true } = {}) {
         <legend>Membre du CSI</legend>
         <div class="toggle-options">
           <label class="toggle-option">
-            <input id="member-csi-yes-${memberCount}" name="csiMember-${memberCount}" data-field="csiMember" type="radio" value="Oui">
+            <input id="member-csi-yes-${memberCount}" name="csiMember-${memberCount}" data-field="csiMember" type="radio" value="Oui" required>
             <span>Oui</span>
           </label>
           <label class="toggle-option">
-            <input id="member-csi-no-${memberCount}" name="csiMember-${memberCount}" data-field="csiMember" type="radio" value="Non">
+            <input id="member-csi-no-${memberCount}" name="csiMember-${memberCount}" data-field="csiMember" type="radio" value="Non" required>
             <span>Non</span>
           </label>
         </div>
@@ -771,7 +771,7 @@ downloadMemberMemoButton.addEventListener("click", () => {
     "[ ] Établissement ou organisme de rattachement",
     "[ ] Fonction ou qualité dans cet établissement ou organisme",
     "[ ] Professeur·e, assimilé·e ou de rang équivalent : oui ou non",
-    "[ ] Membre du CSI : oui ou non",
+    "[ ] Membre du CSI : oui ou non (obligatoire)",
     "[ ] Habilitation à diriger des recherches (HDR) : oui, non ou équivalence",
     "[ ] Titulaire de l’éméritat : oui ou non",
     "[ ] Rôle dans le jury : président·e, directeur·rice de thèse, co-directeur·rice, co-encadrant·e, rapporteur·rice, examinateur·rice ou membre invité",
@@ -1383,6 +1383,7 @@ juryForm.addEventListener("submit", (event) => {
     institution: "établissement/organisme de rattachement",
     quality: "fonction ou qualité",
     memberStatus: "statut de personne professeur.e ou assimilé",
+    csiMember: "appartenance au CSI",
     hdr: "HDR",
     emeritus: "statut d'éméritat",
     role: "rôle dans le jury",
@@ -1390,7 +1391,6 @@ juryForm.addEventListener("submit", (event) => {
   };
   const missingFieldsByMember = memberCards.flatMap((card, index) => {
     const missingLabels = memberFields
-      .filter((fieldName) => fieldName !== "csiMember")
       .filter((fieldName) => !getMemberFieldValue(card, fieldName).trim())
       .map((fieldName) => memberFieldLabels[fieldName]);
     return missingLabels.length > 0 ? [{ memberNumber: index + 1, missingLabels }] : [];

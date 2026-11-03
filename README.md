@@ -14,7 +14,7 @@ Les écoles doctorales et les établissements peuvent compléter ces conditions 
 - Paramétrage du jury : 
   - rappel des règles de l'arrêté du doctorat du 20 mai mai 2016;
   - proposition de règles complémentaires que peuvent  imposer l'école doctorale (ED) et l'établissement d'inscription. Les règles par défaut sont assez usuelles;
-  - sauvegarde, si besoin, des règles une fois modifiée.
+  - sauvegarde, si besoin, des règles une fois modifiées.
 - Identification de la thèse : informations concernant le ou la doctorant·e et le sujet de thèse
 - Membres du Jury : cette partie permet de préciser les informations concernant chaque membre du jury et d'associer le rôle au sein du jury
 - À la fin de la page, des informations concernant la composition du jury s'affichent lorsque vous cliquez sur le bouton « Vérifier le jury ».
@@ -34,8 +34,6 @@ La procédure de vérification porte sur :
 - les règles de l'arrêté ;
 - les règles complémentaires de l'ED ;
 - des tests de cohérence des informations sur les membres du jury.
-
-## Informations générales
 
 - Le détail des éléments qui sont vérifiés est donné dans le fichier [conditions-verifiees.md](conditions-verifiees.md)
 - Le détail des paramètres complémentaires de l'école doctorale, des informations sur le ou la doctorant·e et la thèse, et des informations sur les membres du jury est donné dans le fichier [elements-a-renseigner.md](elements-a-renseigner.md).

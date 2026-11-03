@@ -43,6 +43,6 @@ Les membres dont le rôle est « Membre invité » ne sont compté·es dans aucu
 
 | # | Condition | Détail du contrôle | Gravité |
 |---|-----------|--------------------|---------|
-| T1 | Champs obligatoires | Pour chaque membre, y compris les membres invité·es, tous les champs sont renseignés, sauf « Membre du CSI » qui est facultatif. | Bloquant |
+| T1 | Champs obligatoires | Pour chaque membre, y compris les membres invité·es, tous les champs sont renseignés. | Bloquant |
 | T2 | Cohérence « Professeur ou assimilé » | Signale une fiche de membre où « Professeur ou assimilé » est sélectionné alors que la fonction n'appartient pas à cette catégorie dans la liste des fonctions. | Avertissement |
 | T3 | Personne unique | Une même personne ne peut figurer qu'une seule fois dans le jury, qu'il s'agisse d'un·e membre ou d'un·e membre invité·e. Les fiches sont rapprochées sur le nom et le prénom, sans tenir compte des majuscules, des accents, de l'ordre du nom et du prénom ni des tirets. Une faute de frappe ou une initiale à la place du prénom n'est pas détectée. | Bloquant |
