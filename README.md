@@ -1,11 +1,11 @@
 # Vérification de la conformité d'un jury de thèse
 
 ## Présentation
-Cette application permet de tester la conformité d'un jury dans le cadre de la délivrance du diplôme national du doctorat. Cette application doit être utilisée comme une aide à la réflexion sur la composition du jury, pour le doctorant et son encadrement, avant de faire une proposition à son école doctorale.  **L'utilisation de cette application n'est pas une garantie de la conformité du Jury mais une aide. L'école doctorale puis l'établissement d'inscription vérifieront *in fine* la conformité de la composition du Jury.**
+Cette application permet de tester la conformité d'un jury dans le cadre de la délivrance du diplôme national du doctorat. Elle doit être utilisée comme une aide à la réflexion sur la composition du jury, pour le ou la doctorant·e et l'équipe qui encadre sa thèse, avant de faire une proposition à son école doctorale. **L'utilisation de cette application ne garantit pas la conformité du jury : elle constitue une aide. L'école doctorale puis l'établissement d'inscription vérifieront *in fine* la conformité de la composition du jury.**
 
 Cete application est basée sur les élements de l'[Arrêté du 25 mai 2016 fixant le cadre national de la formation et les modalités conduisant à la délivrance du diplôme national de doctorat](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032587086) concernant la cponstitution d'un Jury.
 
-Les écoles doctorales et les établissements peuvent compléter ces conditions par des élément complémentaires, bien souvent, le nombre possible d'invités, la parité de genre, la limitation de la participation des éméritats à différents rôle dans le jury... Ces éléments ne remettent pas en cause les conditions de l'arrêté, mais peuvent résulter d'une interprétation des règles et de la mise en oeuvre d'une politique doctorale propre à l'école doctorale ou à l'établissement d'inscription.
+Les écoles doctorales et les établissements peuvent compléter ces conditions par des éléments complémentaires, notamment le nombre maximal de membres invité·es, la parité de genre ou la limitation de la participation des membres émérites à certains rôles dans le jury. Ces éléments ne remettent pas en cause les conditions de l'arrêté, mais peuvent résulter d'une interprétation des règles et de la mise en œuvre d'une politique doctorale propre à l'école doctorale ou à l'établissement d'inscription.
 
 ## Fonctionnement général
 
@@ -13,16 +13,16 @@ Les écoles doctorales et les établissements peuvent compléter ces conditions 
 
 - Paramétrage du jury : 
   - rappel des règles de l'arrêté du doctorat du 20 mai mai 2016;
-  - propositionde règles complémentaires que peuvent  imposer l'école doctorale (ED) et l'établissement d'inscription. Les règles par défaut sont assez usuelles;
+  - proposition de règles complémentaires que peuvent  imposer l'école doctorale (ED) et l'établissement d'inscription. Les règles par défaut sont assez usuelles;
   - sauvegarde, si besoin, des règles une fois modifiée.
-- Identification de la thèse : informations concernant le doctorant et le sujet de thèse
+- Identification de la thèse : informations concernant le ou la doctorant·e et le sujet de thèse
 - Membres du Jury : cette partie permet de préciser les informations concernant chaque membre du jury et d'associer le rôle au sein du jury
-- A la fin de la page, s'affiche des informations concernant la composition du jury lorsque l'utilisateur clique sur le bouton "Vérifier le Jury"
+- À la fin de la page, des informations concernant la composition du jury s'affichent lorsque vous cliquez sur le bouton « Vérifier le jury ».
 
 ### Procédure générale
 
-1. Rassemblez les informations sur les membres du jury avant d'en vérifier la conformité. Vous pouvez télécharger le mémo avec la liste des éléments à récupérer depuis la rubrique "Membre du Jury" (téléchargez le mémo si besoin).
-2. Facultatif : modifiez les paramètres correspondant aux règles particulières de votre école doctorale ou établissement d'inscription.
+1. Rassemblez les informations sur les membres du jury avant d'en vérifier la conformité. Vous pouvez télécharger le mémo avec la liste des éléments à récupérer depuis la rubrique « Membres du jury ».
+2. Facultatif : adaptez les paramètres aux règles particulières de votre école doctorale ou de votre établissement d'inscription.
 3. Facultatif : renseignez les informations concernant votre projet de thèse.
 4. Renseignez les informations sur chaque membre du jury.
 5. Vérifiez la conformité du jury et, si nécessaire, corrigez les informations saisies à partir des indications.
@@ -38,13 +38,13 @@ La procédure de vérification porte sur :
 ## Informations générales
 
 - Le détail des éléments qui sont vérifiés est donné dans le fichier [conditions-verifiees.md](conditions-verifiees.md)
-- Le détail des paramètres complémentaires de l'école doctorale, des informations sur le doctorant et la thèse, et des informations sur les membres du jury est donné dans le fichier [elements-a-renseigner.md](elements-a-renseigner.md).
+- Le détail des paramètres complémentaires de l'école doctorale, des informations sur le ou la doctorant·e et la thèse, et des informations sur les membres du jury est donné dans le fichier [elements-a-renseigner.md](elements-a-renseigner.md).
 - Le résultat de la vérification s'affiche en bas de page. Il n'est ni enregistré ni envoyé à un serveur. Le détail (récapitulatif du jury, statut, points à corriger et avertissements, effets complémentaires) est donné dans le fichier [informations-verification.md](informations-verification.md).
 
 
 ## Respect de la vie privée
 
-Cette application a été conçue pour respecter la vie privée des utilisateurs. Les informations saisies concernent des personnes (doctorant, membres du jury) ; elles restent sur votre appareil.
+Cette application a été conçue pour respecter la vie privée des personnes qui l'utilisent. Les informations saisies concernent des personnes (doctorant·e, membres du jury) ; elles restent sur votre appareil.
 
 - **Aucune donnée n'est envoyée à un serveur.** Le nom des personnes, leur établissement, leur fonction, leur genre, leur rôle ou toute autre information saisie ne quittent jamais votre navigateur. La vérification du jury est effectuée localement, par la page elle-même.
 - **Aucun enregistrement automatique.** Les données ne sont conservées ni dans le navigateur (pas de stockage local, pas de cookie), ni sur un serveur. Sans sauvegarde de votre part, elles sont perdues à l'actualisation ou à la fermeture de la page.
@@ -68,5 +68,4 @@ Ce projet est diffusé sous licence [GNU GPL-3.0](./LICENSE). Les données de l'
 
 ## Technologies utilisées
 
-Les contenus, le design et l'architecture technique de cette application ont été générés et optimisés avec l'assistance d'outils d'intelligence artificielle, sous la supervision directe, éditoriale et technique de l'auteur/éditeur. L'ensemble des décisions de publication et de configuration reste soumis au contrôle exclusif de l'éditeur.
-
+Les contenus, le design et l'architecture technique de cette application ont été générés et optimisés avec l'assistance d'outils d'intelligence artificielle, sous la supervision éditoriale et technique de la personne qui en assure la publication. L'ensemble des décisions de publication et de configuration relève de sa responsabilité exclusive.
