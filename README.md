@@ -3,6 +3,8 @@
 ## Présentation
 Cette application permet de tester la conformité d'un jury dans le cadre de la délivrance du diplôme national du doctorat. Elle doit être utilisée comme une aide à la réflexion sur la composition du jury, pour le ou la doctorant·e et l'équipe qui encadre sa thèse, avant de faire une proposition à son école doctorale. **L'utilisation de cette application ne garantit pas la conformité du jury : elle constitue une aide. L'école doctorale puis l'établissement d'inscription vérifieront *in fine* la conformité de la composition du jury.**
 
+La cas des thèses en co-tutelle n'est actuellement pas géré par cette application.
+
 Cete application est basée sur les élements de l'[Arrêté du 25 mai 2016 fixant le cadre national de la formation et les modalités conduisant à la délivrance du diplôme national de doctorat](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032587086) concernant la cponstitution d'un Jury.
 
 Les écoles doctorales et les établissements peuvent compléter ces conditions par des éléments complémentaires, notamment le nombre maximal de membres invité·es, la parité de genre ou la limitation de la participation des membres émérites à certains rôles dans le jury. Ces éléments ne remettent pas en cause les conditions de l'arrêté, mais peuvent résulter d'une interprétation des règles et de la mise en œuvre d'une politique doctorale propre à l'école doctorale ou à l'établissement d'inscription.
