@@ -486,7 +486,7 @@ function updateMemberCompleteness(card) {
   const filled = requiredMemberFields.filter((fieldName) => getMemberFieldValue(card, fieldName).trim()).length;
   const total = requiredMemberFields.length;
   const badge = card.querySelector(".member-card-completeness");
-  badge.textContent = filled === total ? "✓ Complet" : `${filled} champ(s) sur ${total} renseignés`;
+  badge.textContent = filled === total ? "✓ Complet" : `${filled} champ(s) sur ${total} renseigné(s)`;
   badge.dataset.state = filled === total ? "complete" : filled === 0 ? "empty" : "partial";
   badge.title = `${filled} information(s) obligatoire(s) renseignée(s) sur ${total}`;
 }
@@ -591,33 +591,33 @@ function addMember(memberData = {}, { focus = true } = {}) {
       </div>
       <fieldset class="field toggle-field">
         <legend class="field-label-row">
-          <span>Professeur ou assimilé ou rang équivalent</span>
+          <span>Professeur.e ou assimilé ou rang équivalent</span>
           <span class="help">
             <span class="help-icon" aria-hidden="true">?</span>
-            <span class="help-text" role="tooltip">Professeur ou personnel assimilé au sens de l'article 6 du décret n° 92-70 relatif au Conseil national des universités et de l'article 5 du décret n° 87-31 pour les disciplines de santé, ou enseignants de rang équivalent qui ne relèvent pas du ministère chargé de l'enseignement supérieur et de la recherche.</span>
+            <span class="help-text" role="tooltip">Professeur.e ou personnel assimilé au sens de l'article 6 du décret n° 92-70 relatif au Conseil national des universités et de l'article 5 du décret n° 87-31 pour les disciplines de santé, ou enseignants de rang équivalent qui ne relèvent pas du ministère chargé de l'enseignement supérieur et de la recherche.</span>
           </span>
           <span class="info">
             <span class="info-icon" aria-hidden="true">i</span>
             <span class="info-text" role="tooltip">
-              <span>Sont assimilés aux professeurs des universités, pour l'application des
+              <span>Sont assimilés aux professeur.es des universités, pour l'application des
                 <a href="https://www.legifrance.gouv.fr/affichTexteArticle.do?cidTexte=JORFTEXT000000344860&amp;idArticle=LEGIARTI000006439703&amp;dateTexte=&amp;categorieLien=cid" target="_blank" rel="noopener noreferrer">articles 4</a>
                 et
                 <a href="https://www.legifrance.gouv.fr/affichTexteArticle.do?cidTexte=JORFTEXT000000344860&amp;idArticle=LEGIARTI000006439704&amp;dateTexte=&amp;categorieLien=cid" target="_blank" rel="noopener noreferrer">5 du décret du 16 janvier 1992</a>
                 susvisé, les personnels titulaires appartenant aux corps ci-après énumérés :
               </span>
               <ul>
-                <li>Les professeurs et les sous-directeurs de laboratoire du Collège de France ;</li>
-                <li>Les professeurs du Muséum national d'histoire naturelle ;</li>
+                <li>Les professeur.es et les sous-directeurs de laboratoire du Collège de France ;</li>
+                <li>Les professeur.es du Muséum national d'histoire naturelle ;</li>
                 <li>Les professeurs et les sous-directeurs de laboratoire du Conservatoire national des arts et métiers ;</li>
-                <li>Les directeurs d'études de l'Ecole des hautes études en sciences sociales ;</li>
-                <li>Les directeurs d'études de l'Ecole pratique des hautes études, de l'Ecole nationale des chartes et de l'Ecole française d'Extrême-Orient ;</li>
-                <li>Les professeurs de l'Institut national des langues et civilisations orientales ;</li>
+                <li>Les directeur.rices d'études de l'Ecole des hautes études en sciences sociales ;</li>
+                <li>Les directeur.rices d'études de l'Ecole pratique des hautes études, de l'Ecole nationale des chartes et de l'Ecole française d'Extrême-Orient ;</li>
+                <li>Les professeur.es de l'Institut national des langues et civilisations orientales ;</li>
                 <li>Les sous-directeurs d'écoles normales supérieures ;</li>
-                <li>Les astronomes et physiciens régis par le <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000337517&amp;categorieLien=cid" target="_blank" rel="noopener noreferrer">décret n° 86-434 du 12 mars 1986</a> modifié portant statuts du corps des astronomes et physiciens et du corps des astronomes adjoints et physiciens adjoints ;</li>
-                <li>Les astronomes titulaires et les astronomes adjoints régis par le décret du 31 juillet 1936 relatif au statut des observatoires astronomiques ;</li>
-                <li>Les physiciens titulaires et les physiciens adjoints régis par le décret du 25 septembre 1936 relatif au statut des instituts et observatoires de physique du globe ;</li>
-                <li>Les professeurs de première et de deuxième catégorie de l'Ecole centrale des arts et manufactures ;</li>
-                <li>Les directeurs de recherche relevant du décret n° 83-1260 du 30 décembre 1983 fixant les dispositions statutaires communes aux corps des fonctionnaires des établissements publics scientifiques et technologiques.</li>
+                <li>Les astronomes et physicien.ne.s régis par le <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000337517&amp;categorieLien=cid" target="_blank" rel="noopener noreferrer">décret n° 86-434 du 12 mars 1986</a> modifié portant statuts du corps des astronomes et physiciens et du corps des astronomes adjoints et physiciens adjoints ;</li>
+                <li>Les astronomes titulaires et les astronomes adjoint.es régis par le décret du 31 juillet 1936 relatif au statut des observatoires astronomiques ;</li>
+                <li>Les physicien.ne.s titulaires et les physicien.ne.s adjoint.es régis par le décret du 25 septembre 1936 relatif au statut des instituts et observatoires de physique du globe ;</li>
+                <li>Les professeur.es de première et de deuxième catégorie de l'Ecole centrale des arts et manufactures ;</li>
+                <li>Les directeur.rices de recherche relevant du décret n° 83-1260 du 30 décembre 1983 fixant les dispositions statutaires communes aux corps des fonctionnaires des établissements publics scientifiques et technologiques.</li>
               </ul>
             </span>
           </span>
@@ -859,7 +859,7 @@ function populatePdfExport() {
   pdfExport.append(title);
 
   const profileHeading = document.createElement("h2");
-  profileHeading.textContent = "Informations sur le doctorant";
+  profileHeading.textContent = "Informations sur le doctorant ou la doctorante";
   pdfExport.append(profileHeading);
 
   const profile = document.createElement("div");
@@ -1280,7 +1280,7 @@ settingsFileInput.addEventListener("change", async () => {
 saveSettingsButton.addEventListener("click", () => {
   try {
     if (parityModeInput.value === "percentage" && !minimumGenderPercentageInput.value) {
-      throw new Error("Indiquez le pourcentage minimal pour chaque genre afin de sauvegarder les règles.");
+      throw new Error("Indiquez le pourcentage minimal d'hommes et de femmes afin de sauvegarder les règles.");
     }
     const settings = validateSettingsConfiguration({
       format: "jury-these-settings",
@@ -1347,7 +1347,7 @@ configurationFileInput.addEventListener("change", async () => {
 saveConfigurationButton.addEventListener("click", () => {
   try {
     if (parityModeInput.value === "percentage" && !minimumGenderPercentageInput.value) {
-      throw new Error("Indiquez le pourcentage minimal pour chaque genre afin de sauvegarder cette configuration.");
+      throw new Error("Indiquez le pourcentage minimal pour d'hommes et de femmes afin de sauvegarder cette configuration.");
     }
     const configuration = validateConfiguration(collectConfiguration());
     const file = new Blob([`${JSON.stringify({ ...configuration, format: "jury-these", version: 2 }, null, 2)}\n`], {
@@ -1382,7 +1382,7 @@ juryForm.addEventListener("submit", (event) => {
     gender: "genre",
     institution: "établissement/organisme de rattachement",
     quality: "fonction ou qualité",
-    memberStatus: "statut de personne professeure ou assimilée",
+    memberStatus: "statut de personne professeur.e ou assimilé",
     hdr: "HDR",
     emeritus: "statut d'éméritat",
     role: "rôle dans le jury",
@@ -1440,7 +1440,7 @@ juryForm.addEventListener("submit", (event) => {
     const isProfessor = isProfessorQuality(quality);
     const isMarkedProfessor = getMemberFieldValue(card, "memberStatus") === "Oui";
     return quality && isMarkedProfessor && !isProfessor
-      ? [`Membre ${index + 1} (« ${quality} ») : l'interrupteur « Professeur ou assimilé ou rang équivalent » est sur Oui, mais cette fonction n'est pas répertoriée comme relevant de cette catégorie.`]
+      ? [`Membre ${index + 1} (« ${quality} ») : l'interrupteur « Professeur.e ou assimilé ou rang équivalent » est sur Oui, mais cette fonction n'est pas répertoriée comme relevant de cette catégorie.`]
       : [];
   });
   const presidentElectionWarnings = memberCards.flatMap((card, index) =>
@@ -1475,7 +1475,7 @@ juryForm.addEventListener("submit", (event) => {
 
   const minimumProfessorMembers = Math.ceil(memberTotal / 2);
   if (memberTotal > 0 && professorTotal < minimumProfessorMembers) {
-    issues.push(`Au moins la moitié du jury doit être composée de personnes professeures ou assimilées (minimum ${minimumProfessorMembers}, actuellement ${professorTotal}).`);
+    issues.push(`Au moins la moitié du jury doit être composée de professeur.es ou assimilés (minimum ${minimumProfessorMembers}, actuellement ${professorTotal}).`);
   }
 
   if (rapporteurCards.length < 2 || rapporteurCards.length > 3) {
@@ -1509,7 +1509,7 @@ juryForm.addEventListener("submit", (event) => {
       getMemberFieldValue(card, "role") === "Président.e"
       && getMemberFieldValue(card, "memberStatus") !== "Oui"
     ) {
-      issues.push(`Membre ${index + 1} : la personne qui préside le jury doit relever de la catégorie des personnes professeures, assimilées ou enseignantes de rang équivalent.`);
+      issues.push(`Membre ${index + 1} : la personne qui préside le jury doit relever de la catégorie des professeur.es, assimilés ou enseignants de rang équivalent.`);
     }
   });
 
