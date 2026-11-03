@@ -37,6 +37,7 @@ La procédure de vérification porte sur :
 - les règles complémentaires de l'ED ;
 - des tests de cohérence des informations sur les membres du jury.
 
+Détail des Vérifications :
 - Le détail des éléments qui sont vérifiés est donné dans le fichier [conditions-verifiees.md](conditions-verifiees.md)
 - Le détail des paramètres complémentaires de l'école doctorale, des informations sur le ou la doctorant·e et la thèse, et des informations sur les membres du jury est donné dans le fichier [elements-a-renseigner.md](elements-a-renseigner.md).
 - Le résultat de la vérification s'affiche en bas de page. Il n'est ni enregistré ni envoyé à un serveur. Le détail (récapitulatif du jury, statut, points à corriger et avertissements, effets complémentaires) est donné dans le fichier [informations-verification.md](informations-verification.md).
