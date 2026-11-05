@@ -41,6 +41,7 @@ const defaultSettings = Object.freeze({
   maximumMembers: 8,
   maximumInvited: 1,
   csiExaminers: true,
+  csiSupervision: false,
   rapporteurExternalUnit: true,
   rapporteurExternalSchool: true,
   rapporteurExternalInstitution: true,
@@ -401,6 +402,7 @@ document.querySelectorAll(".section-panel-summary .help").forEach((help) => {
 });
 
 let memberCount = 0;
+const CSI_AFFILIATION = "Membre du CSI";
 
 const memberFields = [
   "name",
@@ -709,6 +711,7 @@ function addMember(memberData = {}, { focus = true } = {}) {
           <option value="Membre de l'école doctorale d'inscription">Membre de l'école doctorale d'inscription</option>
           <option value="Membre de l'établissement d'inscription">Membre de l'établissement d'inscription</option>
           <option value="Membre extérieur">Membre extérieur</option>
+          <option value="Membre du CSI">Membre du CSI</option>
         </select>
       </div>
     </div>
@@ -727,7 +730,6 @@ function addMember(memberData = {}, { focus = true } = {}) {
   });
   card.querySelector('[name="name"]').addEventListener("input", () => updateMemberCardSummary(card));
   card.addEventListener("input", () => updateMemberCompleteness(card));
-  card.addEventListener("change", () => updateMemberCompleteness(card));
 
   const qualityInput = card.querySelector('[name="quality"]');
   qualityInput.addEventListener("input", () => applyProfessorStatusFromQuality(card, true));
@@ -747,6 +749,28 @@ function addMember(memberData = {}, { focus = true } = {}) {
     if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) {
       field.value = memberData[fieldName] ?? "";
     }
+  }
+
+  card.addEventListener("change", (event) => {
+    const target = event.target;
+    if (target.matches?.('select[name="affiliation"]')) {
+      if (target.value === CSI_AFFILIATION) {
+        setCsiMember(card, "Oui");
+      } else if (getMemberFieldValue(card, "csiMember") === "Oui") {
+        setCsiMember(card, "Non");
+      }
+    } else if (target.matches?.('input[data-field="csiMember"]')) {
+      const affiliationSelect = getMemberFieldControl(card, "affiliation");
+      if (target.value === "Oui") {
+        affiliationSelect.value = CSI_AFFILIATION;
+      } else if (affiliationSelect.value === CSI_AFFILIATION) {
+        affiliationSelect.value = "";
+      }
+    }
+    updateMemberCompleteness(card);
+  });
+  if (getMemberFieldValue(card, "affiliation") === CSI_AFFILIATION) {
+    setCsiMember(card, "Oui");
   }
 
   applyProfessorStatusFromQuality(card);
@@ -775,7 +799,7 @@ downloadMemberMemoButton.addEventListener("click", () => {
     "[ ] Habilitation à diriger des recherches (HDR) : oui, non ou équivalence",
     "[ ] Titulaire de l’éméritat : oui ou non",
     "[ ] Rôle dans le jury : président·e, directeur·rice de thèse, co-directeur·rice, co-encadrant·e, rapporteur·rice, examinateur·rice ou membre invité",
-    "[ ] Lien avec l’établissement d’inscription : membre de l’unité de recherche, de l’école doctorale, de l’établissement d’inscription ou membre extérieur",
+    "[ ] Lien avec l’établissement d’inscription : membre de l’unité de recherche, de l’école doctorale, de l’établissement d’inscription, membre extérieur ou membre du CSI",
     "",
 
   ].join("\r\n");
@@ -798,6 +822,13 @@ function getMemberFieldValue(card, fieldName) {
     return [...radioGroup].find((radio) => radio.checked)?.value ?? "";
   }
   return getMemberFieldControl(card, fieldName).value;
+}
+
+function setCsiMember(card, value) {
+  const radio = card.querySelector(`input[type="radio"][data-field="csiMember"][value="${value}"]`);
+  if (radio) {
+    radio.checked = true;
+  }
 }
 
 function getMemberFieldControl(card, fieldName) {
@@ -967,6 +998,7 @@ function collectConfiguration() {
     maximumMembers: Number(maximumMembersInput.value),
     maximumInvited: Number(maximumInvitedInput.value),
     csiExaminers: settingEnabled("csi-examiners"),
+    csiSupervision: settingEnabled("csi-supervision"),
     rapporteurExternalUnit: settingEnabled("rapporteur-external-unit"),
     rapporteurExternalSchool: settingEnabled("rapporteur-external-school"),
     rapporteurExternalInstitution: settingEnabled("rapporteur-external-institution"),
@@ -1042,6 +1074,7 @@ function validateConfiguration(data) {
     || settings.maximumInvited < 0
     || settings.maximumInvited > 4
     || typeof settings.csiExaminers !== "boolean"
+    || typeof settings.csiSupervision !== "boolean"
     || typeof settings.rapporteurExternalUnit !== "boolean"
     || typeof settings.rapporteurExternalSchool !== "boolean"
     || typeof settings.rapporteurExternalInstitution !== "boolean"
@@ -1121,6 +1154,7 @@ function validateConfiguration(data) {
       "Membre de l'école doctorale d'inscription",
       "Membre de l'établissement d'inscription",
       "Membre extérieur",
+      "Membre du CSI",
     ],
   };
   const members = data.members.map((member, index) => {
@@ -1188,6 +1222,7 @@ function applySettings(settings) {
   maximumMembersInput.value = String(settings.maximumMembers);
   maximumInvitedInput.value = String(settings.maximumInvited);
   document.querySelector(`input[name="csi-examiners"][value="${settings.csiExaminers ? "Oui" : "Non"}"]`).checked = true;
+  document.querySelector(`input[name="csi-supervision"][value="${settings.csiSupervision ? "Oui" : "Non"}"]`).checked = true;
   document.querySelector(`input[name="rapporteur-external-unit"][value="${settings.rapporteurExternalUnit ? "Oui" : "Non"}"]`).checked = true;
   document.querySelector(`input[name="rapporteur-external-school"][value="${settings.rapporteurExternalSchool ? "Oui" : "Non"}"]`).checked = true;
   document.querySelector(`input[name="rapporteur-external-institution"][value="${settings.rapporteurExternalInstitution ? "Oui" : "Non"}"]`).checked = true;
@@ -1416,12 +1451,16 @@ juryForm.addEventListener("submit", (event) => {
   const menTotal = juryCards.filter((card) => getMemberFieldValue(card, "gender") === "Homme").length;
   const professorTotal = juryCards.filter((card) => getMemberFieldValue(card, "memberStatus") === "Oui").length;
   const supervisionRoles = new Set(["Directeur.rice", "co-Directeur.rice", "co-Encadrant.e"]);
+  const csiSupervision = settingEnabled("csi-supervision");
+  const isSupervisory = (card) =>
+    supervisionRoles.has(getMemberFieldValue(card, "role"))
+    || (csiSupervision && getMemberFieldValue(card, "csiMember") === "Oui");
   const supervisoryMemberNames = new Set(
     memberCards
-      .filter((card) => supervisionRoles.has(getMemberFieldValue(card, "role")))
+      .filter(isSupervisory)
       .map((card) => normalizeSearchText(getMemberFieldValue(card, "name"))),
   );
-  const nonSupervisoryTotal = juryCards.filter((card) => !supervisionRoles.has(getMemberFieldValue(card, "role"))).length;
+  const nonSupervisoryTotal = juryCards.filter((card) => !isSupervisory(card)).length;
   const formatRatio = (count) => {
     const percentage = memberTotal > 0 ? (count / memberTotal) * 100 : 0;
     return `${count}/${memberTotal} (${new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format(percentage)} %)`;

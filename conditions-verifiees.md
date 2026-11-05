@@ -12,7 +12,7 @@ Les membres dont le rôle est « Membre invité » ne sont compté·es dans aucu
 | # | Condition | Détail du contrôle | Gravité |
 |---|-----------|--------------------|---------|
 | A1 | Nombre de membres | Le jury compte entre 4 et 8 personnes. L'école doctorale peut restreindre cette plage (voir C8). | Bloquant |
-| A2 | Membres extérieurs | Au moins la moitié des membres est extérieure à l'unité de recherche, à l'école doctorale et à l'établissement d'inscription (lien « Membre extérieur »). Si le réglage C5 est à « Oui », la direction de thèse n'est pas comptée comme extérieure. | Bloquant |
+| A2 | Membres extérieurs | Au moins la moitié des membres est extérieure à l'unité de recherche, à l'école doctorale et à l'établissement d'inscription (lien « Membre extérieur »). Un membre dont le lien est « Membre du CSI » n'est pas compté comme extérieur. Si le réglage C5 est à « Oui », la direction de thèse n'est pas comptée comme extérieure. | Bloquant |
 | A3 | Parité | Représentation équilibrée des femmes et des hommes. Le mode se règle dans les paramètres : au moins un membre de chaque genre (par défaut), pourcentage minimal de chaque genre (40 % par défaut, arrondi à l'entier supérieur) ou nombre minimal de femmes selon l'effectif. | Bloquant |
 | A4 | Professeur·es ou personnes assimilées | Au moins la moitié du jury est composée de professeur·es, de personnels assimilés ou de membres du corps enseignant de rang équivalent. | Bloquant |
 | A5 | Nombre de rapporteur·rices | Le jury compte deux ou trois rapporteur·rices. | Bloquant |
@@ -38,6 +38,7 @@ Les membres dont le rôle est « Membre invité » ne sont compté·es dans aucu
 | C10 | Émérite rapporteur·rice | Oui | Si « Non », un·e membre émérite ne peut pas être rapporteur·rice. | Bloquant |
 | C11 | Émérite en présidence | Non | Si « Non », un·e membre émérite ne peut pas présider le jury. | Bloquant |
 | C12 | Validité des paramètres | — | Les nombres saisis dans les paramètres respectent les limites indiquées. | Bloquant |
+| C13 | Membres du CSI et encadrement | Non | Si « Oui », un·e membre du CSI est considéré·e comme étant en lien avec l'encadrement : il ou elle est rapproché·e des personnes de l'encadrement (A7) et n'est pas compté·e dans « Nombre de membres n'appartenant pas à l'encadrement de la thèse » de la synthèse. | Bloquant |
 
 ## 3. Contrôles techniques de saisie
 

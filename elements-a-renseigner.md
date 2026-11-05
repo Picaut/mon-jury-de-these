@@ -9,17 +9,18 @@ Ces règles complémentaires peuvent être définies par l'école doctorale dans
 | 1 | Nombre de membres du jury (minimum et maximum) | Curseur à deux poignées | De 4 à 8 | 4 à 8 |
 | 2 | Nombre maximal de membres invité·es | Nombre | De 0 à 4 | 1 |
 | 3 | Les membres du CSI peuvent être examinateur·rices | Oui / Non | Oui, Non | Oui |
-| 4 | Les rapporteur·rices doivent être extérieur·es à l'unité de recherche | Oui / Non | Oui, Non | Oui |
-| 5 | Les rapporteur·rices doivent être extérieur·es à l'école doctorale d'inscription | Oui / Non | Oui, Non | Oui |
-| 6 | Les rapporteur·rices doivent être extérieur·es à l'établissement d'inscription | Oui / Non | Oui, Non | Oui |
-| 7 | La direction de thèse est obligatoirement représentée au jury | Oui / Non | Oui, Non | Oui |
-| 8 | La direction de thèse est toujours considérée comme membre interne, même si la personne est issue d'un autre établissement | Oui / Non | Oui, Non | Non |
-| 9 | Au moins un·e membre du jury doit appartenir à l'établissement d'inscription | Oui / Non | Oui, Non | Non |
-| 10 | Un·e membre émérite peut être rapporteur·rice | Oui / Non | Oui, Non | Oui |
-| 11 | Un·e membre émérite peut présider le jury | Oui / Non | Oui, Non | Non |
-| 12 | Condition de représentation équilibrée des genres | Liste déroulante | Voir ci-dessous | Au moins un membre de chaque genre |
+| 4 | Les membres du CSI sont considérés comme étant en lien avec l'encadrement | Oui / Non | Oui, Non | Non |
+| 5 | Les rapporteur·rices doivent être extérieur·es à l'unité de recherche | Oui / Non | Oui, Non | Oui |
+| 6 | Les rapporteur·rices doivent être extérieur·es à l'école doctorale d'inscription | Oui / Non | Oui, Non | Oui |
+| 7 | Les rapporteur·rices doivent être extérieur·es à l'établissement d'inscription | Oui / Non | Oui, Non | Oui |
+| 8 | La direction de thèse est obligatoirement représentée au jury | Oui / Non | Oui, Non | Oui |
+| 9 | La direction de thèse est toujours considérée comme membre interne, même si la personne est issue d'un autre établissement | Oui / Non | Oui, Non | Non |
+| 10 | Au moins un·e membre du jury doit appartenir à l'établissement d'inscription | Oui / Non | Oui, Non | Non |
+| 11 | Un·e membre émérite peut être rapporteur·rice | Oui / Non | Oui, Non | Oui |
+| 12 | Un·e membre émérite peut présider le jury | Oui / Non | Oui, Non | Non |
+| 13 | Condition de représentation équilibrée des genres | Liste déroulante | Voir ci-dessous | Au moins un membre de chaque genre |
 
-Les trois modes de parité (paramètre 12) :
+Les trois modes de parité (paramètre 13) :
 
 | Mode | Paramètre supplémentaire | Par défaut |
 |------|--------------------------|------------|
@@ -58,7 +59,7 @@ Chaque membre dispose d'une fiche. Le bouton « Télécharger le mémo » fourni
 | 7 | Titulaire de l'HDR | Choix unique | Oui, Non, Équivalence | Oui |
 | 8 | Titulaire de l'éméritat | Oui / Non | Oui, Non | Oui |
 | 9 | Rôle dans le jury | Liste déroulante | Président·e, Directeur·rice de thèse, co-Directeur·rice de thèse, co-Encadrant·e de thèse, Rapporteur·rice, Examinateur·rice, Membre invité·e | Oui |
-| 10 | Lien avec l'établissement | Liste déroulante | Membre de l'unité de recherche, Membre de l'école doctorale d'inscription, Membre de l'établissement d'inscription, Membre extérieur | Oui |
+| 10 | Lien avec l'établissement | Liste déroulante | Membre de l'unité de recherche, Membre de l'école doctorale d'inscription, Membre de l'établissement d'inscription, Membre extérieur, Membre du CSI. Choisir « Membre du CSI » met automatiquement le paramètre 6 sur « Oui » ; inversement, mettre le paramètre 6 sur « Oui » sélectionne « Membre du CSI » (et « Non » retire cette sélection). | Oui |
 
 - Chaque fiche affiche un indicateur de complétude qui compte les informations obligatoires renseignées (10 au total).
 - Les membres dont le rôle est « Membre invité » doivent aussi être renseigné·es, mais ne sont pas compté·es dans les conditions du jury, sauf pour la limite de leur nombre.
